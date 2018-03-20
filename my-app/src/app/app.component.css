@@ -1,0 +1,70 @@
+.wrapper{
+    font-family: monospace;
+    background-color: black;
+    padding: 30px;
+}
+h1{
+    text-align: center;
+    color: greenyellow;
+}
+h2, h3{
+    color:greenyellow;
+    font-weight: normal;
+}
+form, input{
+    background-color: black;
+    color:greenyellow;
+    font-family: monospace;
+    font-size: 1em;
+}
+#update{
+    position: fixed;
+    right: 55px;
+    top: 330px;
+    padding: 10px 20px;
+    background-color: #162e00;
+    text-align: right;
+}
+#update input{
+    width: 15em;
+}
+form{
+    font-size: 1.3em;
+    background-color: #162e00;
+    text-align: right;
+    width: 25em;
+    padding: 15px;
+}
+input{
+    border: none;
+}
+input:focus {
+    outline:0;
+    background-color: #3b6100;
+}
+button{
+    margin: 10px 10px 0;
+    color:greenyellow;
+    font-family: monospace;
+    font-size: 15px;
+    padding: 5px 5px;
+    border: none;
+    background-color: #3b6100;
+}
+button:hover{
+    background-color: #447000;
+}
+button:focus {
+    outline:0;
+}
+.task{
+    margin: 50px 0;
+}
+.task button{
+    font-size: 15px;
+    margin: 0;
+}
+.dash{
+    border: dashed 3px greenyellow;
+    padding-left: 15px;
+}

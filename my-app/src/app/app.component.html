@@ -1,0 +1,42 @@
+
+
+
+<div class="wrapper">
+    <h1>RESTful Tasks API</h1>
+    
+  <form (submit)="createTaskFromService()">
+      <label for="newTask.title">Tiltle :</label><input name="newTask.title" type="text" [(ngModel)]="newTask.title" ><br>
+      <label for="newTask.description">Description :</label><input name="newTask.description" type="text" [(ngModel)]="newTask.description" ><br>
+      <button type="submit" >[ADD NEW TASK]</button>
+    </form>
+    <h3>=====================================</h3>
+
+    <button (click)="getTasksFromService()" >[GET ALL TASKS]</button>
+    <br>
+  <span *ngIf="tasks">
+      
+      <form id="update" *ngIf="updateTask.show" (submit)="updateTaskFromService()" class="dash">
+        <label for="updateTask.title">Tiltle : </label><input name="updateTask.title" type="text" [(ngModel)]="updateTask.title" value="{{updateTask.title}}" focus><br>
+        <label for="updateTask.description">Description : </label><input name="updateTask.description" type="text" [(ngModel)]="updateTask.description" value="{{updateTask.description}}" ><br>
+        <input type="hidden" name="updateTask._id" value="{{updateTask._id}}">
+        <button type="submit" >[UPDATE TASK]</button><button type="button" (click)="cancelEdit()" >[CANCEL]</button>
+      </form>
+
+      
+      <br>
+      <div class="dash">
+        <h2>All the Tasks:</h2>
+        <h3>------------------</h3>
+        <div class="task" *ngFor="let task of tasks">
+          <h3>{{task.title}} - {{task.description}}</h3>
+          <button (click)="populateUpdate(task.title,task.description,task._id)" >[EDIT]</button>
+          <button (click)="deleteTaskFromService(task._id)" >[DELETE]</button>
+          <br>
+        </div>
+      </div>
+    
+   
+  </span>
+</div>
+
+  
